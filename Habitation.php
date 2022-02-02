@@ -10,6 +10,23 @@ class Habitation
     private int $piece;
 
     /**
+     * Habitation constructor.
+     * @param string $pays
+     * @param string $ville
+     * @param int|null $cp
+     * @param int $chambre
+     * @param int $piece
+     */
+    public function __construct(string $pays, string $ville, ?int $cp, int $chambre, int $piece)
+    {
+        $this->setPays($pays);
+        $this->setVille($ville);
+        $this->setCp($cp);
+        $this->setChambre($chambre);
+        $this->setPiece($piece);
+    }
+
+    /**
      * @return string
      */
     public function getPays(): string
@@ -88,6 +105,4 @@ class Habitation
     {
         $this->piece = $piece;
     }
-
-
 }
