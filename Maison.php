@@ -11,7 +11,7 @@ class Maison extends Habitation
      * Maison constructor.
      * @param string $pays
      * @param string $ville
-     * @param int|null $cp
+     * @param string $cp
      * @param int $chambre
      * @param int $piece
      * @param bool $jardin
@@ -19,7 +19,7 @@ class Maison extends Habitation
      * @param bool $garage
      */
     public function __construct(
-        string $pays, string $ville, ?int $cp, int $chambre, int $piece, bool $jardin, int $etages, bool $garage)
+        string $pays, string $ville, string $cp, int $chambre, int $piece, bool $jardin, int $etages, bool $garage)
     {
         parent::__construct($pays, $ville, $cp, $chambre, $piece);
 
@@ -76,3 +76,4 @@ class Maison extends Habitation
         $this->garage = $garage;
     }
 }
+

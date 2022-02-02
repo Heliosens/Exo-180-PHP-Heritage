@@ -5,7 +5,7 @@ class Habitation
 {
     private string $pays;
     private string $ville;
-    private ?int $cp;
+    private string $cp;
     private int $chambre;
     private int $piece;
 
@@ -13,11 +13,11 @@ class Habitation
      * Habitation constructor.
      * @param string $pays
      * @param string $ville
-     * @param int|null $cp
+     * @param string $cp
      * @param int $chambre
      * @param int $piece
      */
-    public function __construct(string $pays, string $ville, ?int $cp, int $chambre, int $piece)
+    public function __construct(string $pays, string $ville, string $cp, int $chambre, int $piece)
     {
         $this->setPays($pays);
         $this->setVille($ville);
@@ -61,15 +61,15 @@ class Habitation
     /**
      * @return int|null
      */
-    public function getCp(): ?int
+    public function getCp(): string
     {
         return $this->cp;
     }
 
     /**
-     * @param int|null $cp
+     * @param string $cp
      */
-    public function setCp(?int $cp): void
+    public function setCp(string $cp): void
     {
         $this->cp = $cp;
     }
